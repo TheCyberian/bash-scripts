@@ -1,0 +1,15 @@
+#!/bin/bash
+
+hen 
+  echo 'Please pass interface amd mac, in order interface mac ....'
+enp3s0" #enter interface name here
+mac="00:11:22:33:45:44" #enter mac address here
+
+echo "[+] Changing MAC Address for $interface to  $mac..."
+
+`sudo ifconfig $interface down`
+`sudo ifconfig $interface hw ether $mac`
+`sudo ifconfig $interface up`
+
+echo "[+] MAC address was changed successfully..."
+
